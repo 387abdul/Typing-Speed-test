@@ -1,0 +1,189 @@
+*{
+    overflow-x: hidden;
+}
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 60px;
+    margin: 0;
+}
+.container {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    /* padding: 10px 10px; */
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+.month-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.month-selector button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.month-selector .active {
+    background-color: #ffbf00;
+    border-radius: 5px;
+}
+.summary {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.summary-box {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.chart-section {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.chart-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.chart-toggle button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.chart-toggle .active {
+    background-color: #ffbf00;
+    border-radius: 5px;
+}
+.chart-placeholder {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 400px;
+    position: relative;
+}
+.chart-placeholder form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chart-placeholder form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: white;
+}
+.chart-placeholder form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #deb437;
+}
+.chart-placeholder form button:hover {
+    background-color: #8a753b;
+    color: rgb(83, 83, 83);
+}
+.chart-placeholder form input:focus {
+    outline: none;
+}
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;  /* Reduce padding on smaller screens */
+    }
+    
+    .container {
+        width: 95vw;    /* Take up more width on smaller screens */
+    }
+    
+    .summary-box {
+        flex-direction: column;  /* Stack boxes vertically */
+        gap: 15px;              /* Add space between boxes */
+    }
+    
+    .chart-placeholder {
+        max-width: 95%;         /* Take up more width */
+        padding: 15px;          /* Reduce padding */
+    }
+    
+    .title {
+        font-size: 24px;        /* Smaller title */
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;          /* Even smaller padding */
+    }
+    
+    .container {
+        width: 98vw;
+    }
+    
+    .chart-toggle {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 5px;
+    }
+    
+    .chart-placeholder {
+        max-width: 98%;
+        padding: 10px;
+    }
+    
+    .chart-placeholder form input,
+    .chart-placeholder form button {
+        width: 100%;            /* Full width inputs and buttons */
+        margin: 5px 0;
+    }
+    
+    .title {
+        font-size: 20px;
+    }
+    
+    .summary {
+        padding: 15px;
+    }
+    
+    /* Make text smaller on mobile */
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Fix chart responsiveness */
+#myChart {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 300px;
+}
+
+
